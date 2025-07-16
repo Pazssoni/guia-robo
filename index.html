@@ -175,7 +175,7 @@
                         <h3 class="text-2xl">Etapa 1: O Terceiro Ponto de Apoio</h3>
                         <p>Para que o robô se equilibre e se mova suavemente, ele utiliza duas rodas motorizadas e um terceiro ponto de apoio. Este apoio é uma roda livre (também chamada de caster wheel ou esfera de apoio). Localize os furos de montagem na parte inferior e frontal do chassi. Posicione a roda livre sobre os furos e fixe-a utilizando dois parafusos de tamanho apropriado com suas respectivas porcas.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
-                            <img src="https://i.ibb.co/6gq1T2M/Whats-App-Image-2025-07-13-at-21-06-16.jpg" alt="Roda livre (caster wheel) para ser montada no chassi" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/1thZ9G6v/Chat-GPT-Image-14-de-jul-de-2025-13-07-35.png" alt="Roda livre (caster wheel) para ser montada no chassi" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
                             <img src="https://i.ibb.co/bG64VTN/Chat-GPT-Image-14-de-jul-de-2025-13-16-25.png" alt="Roda livre montada no chassi" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
                         </div>
                     </div>
@@ -191,7 +191,10 @@
                      <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: A Ponte para o Controle - Conectando a Ponte H</h3>
                         <p>A Ponte H "traduz" os comandos do Arduino em movimento de alta potência para os motores. Antes de instalar a Ponte H no chassi, conecte os dois fios de cada motor aos terminais de saída da placa usando uma pequena chave philips (é a parte Verde da placa onde está escrito Motor A e Motor B, você deve seguir a ordem, cabo de trás depois o da frente com o motor da esquerda e depois com o da direita). Após conectar os fios, encaixe a placa da Ponte H no local designado na parte frontal do robô.</p>
-                        <img src="https://i.ibb.co/Z6nCDsRX/Chat-GPT-Image-14-de-jul-de-2025-14-02-16.png" alt="Ponte H conectada aos motores e encaixada no chassi" class="w-full max-w-md mx-auto rounded-lg shadow-md border border-slate-300 my-4">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/Z6nCDsRX/Chat-GPT-Image-14-de-jul-de-2025-14-02-16.png" alt="Ponte H conectada aos motores, antes de encaixar no chassi" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/hx53zBy9/Whats-App-Image-2025-07-16-at-13-22-59.jpg" alt="Ponte H encaixada no chassi" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -213,16 +216,58 @@
                         <h3 class="text-2xl">Etapa 2: Preparação Crítica - Pré-cabeamento do Shield</h3>
                         <p>Esta é uma das etapas mais importantes para garantir uma montagem final fácil e sem erros. Em vez de conectar os fios um a um com a placa já dentro do chassi apertado, todo o cabeamento será preparado agora. Esta abordagem transforma uma tarefa potencialmente frustrante em uma atividade de montagem organizada e didática.</p>
                         <p>Utilizando a tabela de conexões abaixo, conecte um cabo jumper (fêmea-fêmea) em cada pino necessário no shield. É útil usar cabos de cores diferentes para cada grupo de função (ex: um conjunto de cores para o sensor de distância, outro para os sensores de linha, etc.).</p>
+                        <div class="overflow-x-auto my-4">
+                            <table class="min-w-full border">
+                                <thead class="table-header">
+                                    <tr>
+                                        <th class="p-2 text-left border">Componente</th>
+                                        <th class="p-2 text-left border">Pino do Componente</th>
+                                        <th class="p-2 text-left border">Pino do Shield (Arduino Nano)</th>
+                                        <th class="p-2 text-left border">Função</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b"><td class="border p-2" colspan="4"><strong>Sensor de Distância VL53L0X</strong></td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`VIN`</td><td class="border p-2">`5V`</td><td class="border p-2">Alimentação do sensor ($+5V$)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`GND`</td><td class="border p-2">`GND`</td><td class="border p-2">Terra (Referência $0V$)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`SDA`</td><td class="border p-2">`A4`</td><td class="border p-2">Linha de Dados do barramento I²C</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`SCL`</td><td class="border p-2">`A5`</td><td class="border p-2">Linha de Clock do barramento I²C</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`XSHUT`</td><td class="border p-2">`D2`</td><td class="border p-2">Pino de controle (liga/desliga o sensor)</td></tr>
+                                    <tr class="border-b"><td class="border p-2" colspan="4"><strong>5 Sensores de Linha TCRT5000</strong></td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`VCC` (todos)</td><td class="border p-2">`5V`</td><td class="border p-2">Alimentação dos sensores ($+5V$)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`GND` (todos)</td><td class="border p-2">`GND`</td><td class="border p-2">Terra (Referência $0V$)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`OUT S0` (Ext. Esq.)</td><td class="border p-2">`D3`</td><td class="border p-2">Sinal do sensor 1 (digital)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`OUT S1` (Meia Esq.)</td><td class="border p-2">`D4`</td><td class="border p-2">Sinal do sensor 2 (digital)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`OUT S2` (Centro)</td><td class="border p-2">`D5`</td><td class="border p-2">Sinal do sensor 3 (digital)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`OUT S3` (Meia Dir.)</td><td class="border p-2">`D6`</td><td class="border p-2">Sinal do sensor 4 (digital)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`OUT S4` (Ext. Dir.)</td><td class="border p-2">`D7`</td><td class="border p-2">Sinal do sensor 5 (digital)</td></tr>
+                                    <tr class="border-b"><td class="border p-2" colspan="4"><strong>Ponte H (Controle Motores)</strong></td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`IN1`</td><td class="border p-2">`D8`</td><td class="border p-2">Controle do motor esquerdo (sentido 1)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`IN2`</td><td class="border p-2">`D9`</td><td class="border p-2">Controle do motor esquerdo (sentido 2)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`IN3`</td><td class="border p-2">`D10`</td><td class="border p-2">Controle do motor direito (sentido 1)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`IN4`</td><td class="border p-2">`D11`</td><td class="border p-2">Controle do motor direito (sentido 2)</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`VCC`</td><td class="border p-2">`5V`</td><td class="border p-2">Alimentação da lógica da Ponte H</td></tr>
+                                    <tr class="border-b"><td class="border p-2"></td><td class="border p-2">`GND`</td><td class="border p-2">`GND`</td><td class="border p-2">Terra comum</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                         <p><strong>Atenção, Professor!</strong> O pino `VIN` do Arduino Nano (acessível no shield) será usado para alimentar a placa a partir da bateria, através da Ponte H. Para isso, um fio deve ser soldado a este pino. Esta solda deve ser feita previamente por um profissional para garantir uma conexão segura e durável.</p>
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: Foco na Ponte H</h3>
-                        <p>Localize os pinos no shield que controlarão a Ponte H. Conecte os jumpers aos pinos D8, D9, D10, D11, e também a um pino 5V e GND para a lógica da ponte. Mantenha esses fios agrupados.</p>
-                        <img src="https://i.ibb.co/fzMzJPWN/PINAGEM4.jpg" alt="Close-up do shield com os 6 jumpers da Ponte H conectados e agrupados." class="content-image">
+                        <p>Localize os pinos no shield que controlarão a Ponte H. Conecte os jumpers aos pinos D8, D9, D10, D11 (mantenha eles unidos em duplas, D8 e D9, D10 e D11, utilize tons proximos para cada dupla), e também a um pino 5V (utilizar jumper branco) e GND (marrom) para a lógica da ponte. Mantenha esses fios agrupados.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/fzMzJPWN/PINAGEM4.jpg" alt="Close-up do shield com os 6 jumpers da Ponte H conectados e agrupados." class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/VpY0qq9k/ponteh.png" alt="Imagem adicional da Ponte H" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 4: Foco no Sensor de Distância</h3>
-                        <p>Agora, conecte os jumpers para o sensor de distância VL53L0X. Você precisará dos pinos A4 (SDA), A5 (SCL), D2 (XSHUT), e um pino 5V e GND. Agrupe esses 5 fios.</p>
-                        <img src="https://i.ibb.co/fYV8Xf9C/PINAGEM.jpg" alt="Close-up do shield com os 5 jumpers do sensor de distância conectados e agrupados." class="content-image">
+                        <p>Agora, conecte os jumpers para o sensor de distância VL53L0X. Você precisará dos pinos A4 (SDA), A5 (SCL), utlize cores de tons proximos e mantenha eles agrupados, um pino 5V (vermelho) e GND (marrom). Agrupe esses 5 fios.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/fYV8Xf9C/PINAGEM.jpg" alt="Close-up do shield com os 5 jumpers do sensor de distância conectados e agrupados." class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/hRPvd80w/sensordist.png" alt="Sensor de distância VL53L0X" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                      <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 5: Foco nos Sensores de Linha</h3>
@@ -232,7 +277,10 @@
                      <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 6: Instalação Final</h3>
                         <p>Com o conjunto "cérebro + sistema nervoso" pronto, encaixe-o no local designado dentro do chassi do robô. Passe cuidadosamente os feixes de cabos pelos canais e aberturas internas do chassi, direcionando-os para a parte frontal, prontos para serem ligados aos seus respectivos componentes no próximo capítulo.</p>
-                        <img src="https://i.ibb.co/Kcr1bDGg/ROB-CHASSI.png" alt="Foto do conjunto sendo encaixado no seu compartimento no chassi, com os feixes de fios organizados." class="content-image">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/Kcr1bDGg/ROB-CHASSI.png" alt="Conjunto encaixado no compartimento no chassi" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/PzDk44yX/Whats-App-Image-2025-07-16-at-13-30-39.jpg" alt="Feixes de fios organizados" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -244,7 +292,11 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 1: Os Olhos a Laser - Sensor de Distância VL53L0X</h3>
                         <p>Este sensor funciona como uma trena a laser, medindo distâncias com alta exatidão. Encaixe o módulo do sensor no seu suporte específico na parte frontal do chassi. Pegue o grupo de fios preparado e conecte cada jumper ao pino correspondente no módulo: VIN, GND, SDA, SCL e XSHUT.</p>
-                        <img src="https://i.ibb.co/GBzKqM1/VL53L0X.png" alt="Sensor de distância VL53L0X conectado" class="content-image">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/GBzKqM1/VL53L0X.png" alt="Módulo do sensor de distância" class="w-full sm:w-1/3 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/7tvXsTR4/IMG-20250715-110531.jpg" alt="Sensor de distância VL53L0X conectado - Vista 1" class="w-full sm:w-1/3 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/8qZvVds/IMG-20250715-110506.jpg" alt="Sensor de distância VL53L0X conectado - Vista 2" class="w-full sm:w-1/3 max-w-xs rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 2: Ligando os Motores ao Cérebro</h3>
@@ -254,7 +306,12 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: Sentindo o Chão - Placa de Sensores TCRT5000</h3>
                         <p>Esta placa permite ao robô seguir uma linha. Cada sensor emite luz infravermelha e lê o reflexo. Primeiro, fixe a placa de sensores ao seu suporte de plástico. Conecte os jumpers (VCC, GND, e os sinais de S0 a S4). Por fim, fixe o conjunto completo na estrutura frontal do robô, utilizando pequenos parafusos e porcas.</p>
-                        <img src="https://i.ibb.co/xST2LHgH/Whats-App-Image-2025-07-14-at-19-09-49.png" alt="Placa de sensores TCRT5000 montada no robô" class="content-image">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center items-center my-4">
+                           <img src="https://i.ibb.co/xST2LHgH/Whats-App-Image-2025-07-14-at-19-09-49.png" alt="Placa de sensores TCRT5000 original" class="w-full rounded-lg shadow-md border border-slate-300">
+                           <img src="https://i.ibb.co/Mx6H3PsD/IMG-20250715-112909.jpg" alt="Placa de sensores TCRT5000 montada no robô - Vista 1" class="w-full rounded-lg shadow-md border border-slate-300">
+                           <img src="https://i.ibb.co/tp1qmrZ5/IMG-20250715-112923.jpg" alt="Placa de sensores TCRT5000 montada no robô - Vista 2" class="w-full rounded-lg shadow-md border border-slate-300">
+                           <img src="https://i.ibb.co/J9b33Ny/IMG-20250715-114016.jpg" alt="Placa de sensores TCRT5000 montada no robô - Vista 3" class="w-full rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 4: A Fonte de Energia - Instalando a Bateria</h3>
@@ -271,10 +328,12 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 1: Módulo 1: A Carcaça Básica</h3>
                         <p>Este módulo padrão protege os componentes eletrônicos e dá ao robô um acabamento limpo. É ideal para as primeiras atividades.</p>
+                        <img src="https://i.ibb.co/Nd8F90Qx/Whats-App-Image-2025-07-16-at-13-24-31-1.png" alt="Módulo da Carcaça Básica" class="content-image">
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 2: Módulo 2: O Lutador de Sumô</h3>
                         <p>Adiciona uma rampa frontal, projetada para competições de sumô de robôs. Permite explorar conceitos de Física como força e torque.</p>
+                        <img src="https://i.ibb.co/tPpvcmB6/Whats-App-Image-2025-07-16-at-13-22-42-1.png" alt="Módulo do Lutador de Sumô" class="content-image">
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: Módulo 3: O Construtor LEGO</h3>
@@ -299,12 +358,18 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 2: Conectando seu Robô</h3>
                         <p>Na aba "Dispositivos", adicione "Arduino Nano". Conecte o robô via USB e, no menu "Conectar", selecione a porta serial correta. Para as atividades, use o modo <strong>Carregar (Upload)</strong> para que o robô funcione de forma autônoma.</p>
-                        <img src="https://i.ibb.co/BKj67TnW/Mblock-Conex-o.jpg" alt="Conectando o Arduino Nano no mBlock" class="content-image">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/JjnVkHw3/mblock.jpg" alt="Conectando o Arduino Nano no mBlock" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/nMFsrGw9/arduino-nano.jpg" alt="Imagem adicional da Conexão" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: As Ferramentas Especiais: Instalando Extensões</h3>
                         <p>Para controlar nossos componentes, precisamos de extensões. Na paleta de blocos, clique em "+ extensão", selecione "Adicionar a partir de ficheiro" e instale os arquivos .mext fornecidos: <strong>"Sensor HC-SR04"</strong> e <strong>"Sensor TCRT5000"</strong>. Sem elas, as atividades não funcionarão.</p>
-                        <img src="https://i.ibb.co/vxGfsxpY/Sem-t-tulo.png" alt="Instalando extensões no mBlock" class="content-image">
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
+                            <img src="https://i.ibb.co/TqDdvZzb/Sem-t-tulo.jpg" alt="Instalando extensões no mBlock" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/zVjtskvz/easy-motor.jpg" alt="Imagem adicional da Instalação de Extensões" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -316,17 +381,17 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 1: Atividade 1: Dança Robótica (Frente e Trás)</h3>
                         <p><strong>Objetivo:</strong> Uma atividade simples para verificar se tudo está funcionando. <strong>Lógica:</strong> O programa fará o robô se mover para frente, parar, mover-se para trás, e parar novamente, repetindo este ciclo.</p>
-                        <img src="https://placehold.co/700x450/e2e8f0/334155?text=Cole+o+link+do+código+em+blocos+aqui" alt="Código em blocos da Atividade 1 no mBlock" class="content-image">
+                        <img src="https://i.ibb.co/GfYNgDjF/image.png" alt="Código em blocos da Atividade 1 no mBlock" class="content-image">
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 2: Atividade 2: O Desafio do Quadrado (Navegação Geométrica)</h3>
                         <p><strong>Objetivo:</strong> Introduzir o conceito de movimentos sequenciais e calibração. <strong>Lógica:</strong> O robô irá repetir quatro vezes a sequência de "andar para frente" e "virar à direita". Os alunos devem ser incentivados a experimentar com o tempo de virada até que o robô faça uma curva de 90 graus. Este processo de ajuste fino é a <strong>calibração</strong>.</p>
-                        <img src="https://placehold.co/700x450/e2e8f0/334155?text=Cole+o+link+do+código+em+blocos+aqui" alt="Código em blocos da Atividade 2 no mBlock" class="content-image">
+                        <img src="https://i.ibb.co/0p7yHWDK/image-1.png" alt="Código em blocos da Atividade 2 no mBlock" class="content-image">
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: Atividade 3: O Seguidor de Linha Inteligente</h3>
                         <p><strong>Objetivo:</strong> Utilizar os dados dos sensores de linha para que o robô tome decisões em tempo real. <strong>Lógica:</strong> A estratégia é manter o sensor central sobre a linha preta. Se o sensor central vê preto, o robô vai para frente. Se um sensor lateral vê preto, o robô faz uma curva de correção para o lado oposto. A correção é mais forte quanto mais distante da linha o sensor estiver.</p>
-                        <img src="https://placehold.co/700x450/e2e8f0/334155?text=Cole+o+link+do+código+em+blocos+aqui" alt="Código em blocos da Atividade 3 no mBlock" class="content-image">
+                       <img src="https://i.ibb.co/9mVZPZJT/Whats-App-Image-2025-07-16-at-14-23-46.jpg" alt="Código em blocos da Atividade 3 no mBlock" class="content-image">
                     </div>
                 </div>
             </section>
