@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Fiel - Robô Educacional</title>
-    <!-- Chosen Palette: Professional Blue (Slate, Sky, White) -->
+    <!-- Chosen Palette: BEMO Brand (Orange, Blue, Slate) -->
     <!-- Application Structure Plan: A single-page application that strictly mirrors the provided document's structure. A 'home' view contains the full preface and interactive cards for each chapter. Clicking a card or a sidebar link transitions the user to a dedicated view for that chapter, hiding all other content. This approach provides a focused, linear-yet-flexible user path, directly reflecting the source document's organization. -->
     <!-- Visualization & Content Choices: 
         - Report Info: Full text from the source document. -> Goal: Inform/Guide -> Presentation Method: Verbatim text blocks organized into a home (preface) and seven chapter views. Each chapter is broken into 'Etapa' blocks as requested. -> Interaction: Navigation via sidebar and home cards. -> Justification: Fulfills the user's core requirement for a faithful digital replica of the written guide.
@@ -28,7 +28,7 @@
             color: #0f172a; /* slate-900 */
         }
         .active-nav {
-            background-color: #0284c7; /* sky-600 */
+            background-color: #f97316; /* orange-500 */
             color: #ffffff;
         }
         .chapter-card {
@@ -38,7 +38,7 @@
         }
         .chapter-card:hover {
             transform: translateY(-5px);
-            border-color: #0284c7; /* sky-600 */
+            border-color: #f97316; /* orange-500 */
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
         }
         .content-view {
@@ -53,7 +53,7 @@
         }
         .step-block {
             background-color: #f8fafc; /* slate-50 */
-            border-left: 4px solid #0ea5e9; /* sky-500 */
+            border-left: 4px solid #3b82f6; /* blue-500 */
         }
         .table-header {
             background-color: #e2e8f0; /* slate-200 */
@@ -78,7 +78,7 @@
         <!-- Sidebar Navigation -->
         <aside class="sticky top-0 h-screen w-72 bg-white border-r border-slate-200 p-4 hidden lg:flex flex-col">
             <div class="flex items-center gap-3 mb-8">
-                 <div class="w-12 h-12 bg-slate-800 rounded-md flex items-center justify-center text-white text-2xl font-bold">R</div>
+                 <img src="https://i.ibb.co/XZg5Gctk/bemoo.png" alt="BEMO Logo" class="w-16 h-16">
                  <h1 class="text-2xl text-slate-800">Guia do Robô</h1>
             </div>
             <nav id="sidebar-nav">
@@ -122,18 +122,24 @@
 
                         <h4 class="text-xl font-bold mt-8 mb-2">Uma Nota para Professores e Alunos</h4>
                         <p>Este guia foi criado com um princípio em mente: qualquer pessoa pode aprender robótica. Não é necessário nenhum conhecimento prévio em eletrônica, programação ou impressão 3D. Cada capítulo foi estruturado para apresentar os conceitos de forma clara e passo a passo. O erro não deve ser visto como um fracasso, mas como uma parte essencial do processo de "aprender fazendo" (learning by doing). Encoraja-se a experimentação, a curiosidade e a colaboração. Juntos, professores e alunos podem transformar este projeto numa experiência de aprendizado inesquecível.</p>
+
+                        <h4 class="text-xl font-bold mt-8 mb-2">VideoTutorial</h4>
+                        <p>Para complementar este guia, um vídeo tutorial completo está disponível. Ele mostra visualmente cada passo da montagem e pode ajudar a esclarecer qualquer dúvida durante o processo. Clique no link abaixo para aceder.</p>
+                        <a href="https://drive.google.com/file/d/1hjxwTRMcuhNh5ZsvM-hWMZGKmbz7QlOj/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors mt-2 no-underline">
+                            Assistir ao Vídeo Tutorial
+                        </a>
                     </div>
                 </div>
 
                 <h2 class="text-3xl mt-12 mb-6">Navegue pelos Capítulos</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <a href="#capitulo1" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 1: Impressão 3D</h3><p>Dando Vida ao Chassi.</p></a>
-                    <a href="#capitulo2" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 2: Mobilidade</h3><p>Montando os Motores e Roda.</p></a>
-                    <a href="#capitulo3" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 3: Eletrônica Central</h3><p>Preparando o Cérebro do Robô.</p></a>
-                    <a href="#capitulo4" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 4: Sensores e Bateria</h3><p>Conectando os Componentes.</p></a>
-                    <a href="#capitulo5" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 5: Módulos</h3><p>Personalizando seu Robô.</p></a>
-                    <a href="#capitulo6" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 6: Programação</h3><p>A Linguagem dos Blocos.</p></a>
-                    <a href="#capitulo7" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-sky-700">Capítulo 7: Atividades</h3><p>Colocando Tudo em Prática.</p></a>
+                    <a href="#capitulo1" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 1: Impressão 3D</h3><p>Dando Vida ao Chassi.</p></a>
+                    <a href="#capitulo2" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 2: Mobilidade</h3><p>Montando os Motores e Roda.</p></a>
+                    <a href="#capitulo3" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 3: Eletrônica Central</h3><p>Preparando o Cérebro do Robô.</p></a>
+                    <a href="#capitulo4" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 4: Sensores e Bateria</h3><p>Conectando os Componentes.</p></a>
+                    <a href="#capitulo5" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 5: Módulos</h3><p>Personalizando seu Robô.</p></a>
+                    <a href="#capitulo6" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 6: Programação</h3><p>A Linguagem dos Blocos.</p></a>
+                    <a href="#capitulo7" class="chapter-card p-6 rounded-lg block"><h3 class="text-xl font-bold text-blue-600">Capítulo 7: Atividades</h3><p>Colocando Tudo em Prática.</p></a>
                 </div>
             </section>
 
@@ -144,7 +150,10 @@
                     <p>A primeira etapa para construir o robô é fabricar o seu "esqueleto", o chassi. Utilizando a tecnologia de impressão 3D, é possível transformar um arquivo digital num objeto físico e funcional.</p>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 1: Obtendo os Arquivos</h3>
-                        <p>Para começar, é necessário baixar os arquivos de modelo 3D, que geralmente estão no formato .STL ou .3MF. Estes arquivos contêm as informações geométricas que a impressora 3D utilizará para construir as peças camada por camada. O link para o download dos arquivos do chassi será disponibilizado pelo instrutor ou no material de apoio do projeto.</p>
+                        <p>Para começar, é necessário baixar os arquivos de modelo 3D, que geralmente estão no formato .STL ou .3MF. Estes arquivos contêm as informações geométricas que a impressora 3D utilizará para construir as peças camada por camada. Utilize o botão abaixo para fazer o download.</p>
+                        <a href="https://drive.google.com/drive/folders/11OQ8uMFsa6vohkhmG8vIQ4cb6spWBByZ" target="_blank" rel="noopener noreferrer" class="inline-block bg-orange-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-orange-600 transition-colors mt-4 no-underline">
+                            Baixar Arquivos 3D
+                        </a>
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 2: Preparando para a Impressão</h3>
@@ -163,6 +172,7 @@
                             <li><strong>Limpeza e Acabamento:</strong> Remova pequenas rebarbas ou fios finos de plástico (conhecidos como "stringing") cuidadosamente com um estilete (por um adulto) ou com os dedos.</li>
                             <li><strong>Lixamento para um Acabamento Perfeito:</strong> Para o PLA, recomenda-se o lixamento úmido para evitar que o atrito derreta o plástico. Inicie com uma lixa de granulação mais grossa (ex: 240) e avance para granulações mais finas (ex: 400, 800) para obter uma superfície lisa e garantir que os componentes se encaixem perfeitamente.</li>
                         </ol>
+                        <img src="https://i.ibb.co/b52n4Dr4/Whats-App-Image-2025-08-20-at-07-16-31.jpg" alt="Motores DC com rodas" class="content-image">
                     </div>
                 </div>
             </section>
@@ -253,49 +263,24 @@
                         </div>
                          <p><strong>Atenção, Professor!</strong> O pino `VIN` do Arduino Nano (acessível no shield) será usado para alimentar a placa a partir da bateria, através da Ponte H. Para isso, um fio deve ser soldado a este pino. Esta solda deve ser feita previamente por um profissional para garantir uma conexão segura e durável.</p>
                     </div>
-                    <div class="step-block p-6 rounded-md">
-                        <h3 class="text-2xl">Etapa 3: Foco na Ponte H</h3>
-                        <p>Localize os pinos no shield que controlarão a Ponte H. Conecte os jumpers aos pinos D8, D9, D10, D11 (mantenha eles unidos em duplas, D8 e D9, D10 e D11, utilize tons proximos para cada dupla), e também a um pino 5V (utilizar jumper branco) e GND (marrom) para a lógica da ponte. Mantenha esses fios agrupados.</p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
-                            <img src="https://i.ibb.co/fzMzJPWN/PINAGEM4.jpg" alt="Close-up do shield com os 6 jumpers da Ponte H conectados e agrupados." class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
-                            <img src="https://i.ibb.co/VpY0qq9k/ponteh.png" alt="Imagem adicional da Ponte H" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
-                        </div>
-                    </div>
-                    <div class="step-block p-6 rounded-md">
-                        <h3 class="text-2xl">Etapa 4: Foco no Sensor de Distância</h3>
-                        <p>Agora, conecte os jumpers para o sensor de distância VL53L0X. Você precisará dos pinos A4 (SDA), A5 (SCL), utlize cores de tons proximos e mantenha eles agrupados, um pino 5V (vermelho) e GND (marrom). Agrupe esses 5 fios.</p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
-                            <img src="https://i.ibb.co/fYV8Xf9C/PINAGEM.jpg" alt="Close-up do shield com os 5 jumpers do sensor de distância conectados e agrupados." class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
-                            <img src="https://i.ibb.co/hRPvd80w/sensordist.png" alt="Sensor de distância VL53L0X" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
-                        </div>
-                    </div>
                      <div class="step-block p-6 rounded-md">
-                        <h3 class="text-2xl">Etapa 5: Foco nos Sensores de Linha</h3>
-                        <p>Por último, conecte os jumpers para os 5 sensores de linha TCRT5000. Conecte os fios aos pinos D3, D4, D5, D6, D7, e um pino 5V e GND que serão compartilhados por todos os sensores. Agrupe estes 7 fios.</p>
-                        <img src="https://i.ibb.co/9kdNYSFX/CHIELD-ARDUINO-NANO-1.png" alt="Close-up do shield com os 7 jumpers dos sensores de linha conectados e agrupados." class="content-image">
-                    </div>
-                     <div class="step-block p-6 rounded-md">
-                        <h3 class="text-2xl">Etapa 6: Instalação Final</h3>
+                        <h3 class="text-2xl">Etapa 3: Instalação Final</h3>
                         <p>Com o conjunto "cérebro + sistema nervoso" pronto, encaixe-o no local designado dentro do chassi do robô. Passe cuidadosamente os feixes de cabos pelos canais e aberturas internas do chassi, direcionando-os para a parte frontal, prontos para serem ligados aos seus respectivos componentes no próximo capítulo.</p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
-                            <img src="https://i.ibb.co/Kcr1bDGg/ROB-CHASSI.png" alt="Conjunto encaixado no compartimento no chassi" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
-                            <img src="https://i.ibb.co/PzDk44yX/Whats-App-Image-2025-07-16-at-13-30-39.jpg" alt="Feixes de fios organizados" class="w-full sm:w-1/2 max-w-md rounded-lg shadow-md border border-slate-300">
-                        </div>
+                        <img src="https://i.ibb.co/Kcr1bDGg/ROB-CHASSI.png" alt="Foto do conjunto sendo encaixado no seu compartimento no chassi, com os feixes de fios organizados." class="content-image">
                     </div>
                 </div>
             </section>
             
-            <section id="capitulo4" class="main-section hidden content-view p-8">
-                <h2 class="text-3xl mb-6">Capítulo 4: Dando Sentidos ao Robô - Conexão de Sensores e Bateria</h2>
+            <section id="capitulo5" class="main-section hidden content-view p-8">
+                <h2 class="text-3xl mb-6">Capítulo 5: Conexões Finais - Sensores e Bateria</h2>
                  <div class="space-y-8 prose max-w-none prose-slate">
                     <p>Com o cérebro instalado e os cabos preparados, o próximo passo é conectar os "sentidos" do robô. Estes sensores permitirão que ele perceba o mundo ao seu redor.</p>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 1: Os Olhos a Laser - Sensor de Distância VL53L0X</h3>
                         <p>Este sensor funciona como uma trena a laser, medindo distâncias com alta exatidão. Encaixe o módulo do sensor no seu suporte específico na parte frontal do chassi. Pegue o grupo de fios preparado e conecte cada jumper ao pino correspondente no módulo: VIN, GND, SDA, SCL e XSHUT.</p>
                         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center my-4">
-                            <img src="https://i.ibb.co/GBzKqM1/VL53L0X.png" alt="Módulo do sensor de distância" class="w-full sm:w-1/3 max-w-xs rounded-lg shadow-md border border-slate-300">
-                            <img src="https://i.ibb.co/7tvXsTR4/IMG-20250715-110531.jpg" alt="Sensor de distância VL53L0X conectado - Vista 1" class="w-full sm:w-1/3 max-w-xs rounded-lg shadow-md border border-slate-300">
-                            <img src="https://i.ibb.co/8qZvVds/IMG-20250715-110506.jpg" alt="Sensor de distância VL53L0X conectado - Vista 2" class="w-full sm:w-1/3 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/7tvXsTR4/IMG-20250715-110531.jpg" alt="Sensor de distância VL53L0X conectado - Vista 1" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
+                            <img src="https://i.ibb.co/8qZvVds/IMG-20250715-110506.jpg" alt="Sensor de distância VL53L0X conectado - Vista 2" class="w-full sm:w-1/2 max-w-xs rounded-lg shadow-md border border-slate-300">
                         </div>
                     </div>
                     <div class="step-block p-6 rounded-md">
@@ -321,8 +306,8 @@
                 </div>
             </section>
 
-             <section id="capitulo5" class="main-section hidden content-view p-8">
-                <h2 class="text-3xl mb-6">Capítulo 5: Personalidade e Função - Explorando os Módulos Intercambiáveis</h2>
+             <section id="capitulo6" class="main-section hidden content-view p-8">
+                <h2 class="text-3xl mb-6">Capítulo 6: Personalidade e Função - Explorando os Módulos</h2>
                 <div class="space-y-8 prose max-w-none prose-slate">
                     <p>Uma das características mais interessantes deste robô é sua capacidade de se adaptar a diferentes tarefas através de módulos intercambiáveis. O encaixe é simples: basta posicioná-los sobre a área central do robô.</p>
                     <div class="step-block p-6 rounded-md">
@@ -338,16 +323,18 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: Módulo 3: O Construtor LEGO</h3>
                         <p>Com encaixes compatíveis com peças LEGO, este módulo transforma o robô numa plataforma de construção para projetos de Engenharia e Design.</p>
+                        <img src="https://i.ibb.co/zVsYP25g/lego.png" alt="Módulo Construtor LEGO" class="content-image">
                     </div>
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 4: Módulo 4: O Artista Robótico</h3>
                         <p>Possui um suporte para caneta, transformando o robô num "plotter" móvel. Conecta programação com Arte e Matemática.</p>
+                        <img src="https://i.ibb.co/YFnLmBSt/art.png" alt="Módulo Artista Robótico" class="content-image">
                     </div>
                 </div>
             </section>
 
-            <section id="capitulo6" class="main-section hidden content-view p-8">
-                <h2 class="text-3xl mb-6">Capítulo 6: A Linguagem dos Blocos - Programando com mBlock</h2>
+            <section id="capitulo7" class="main-section hidden content-view p-8">
+                <h2 class="text-3xl mb-6">Capítulo 7: A Linguagem dos Blocos - Programando com mBlock</h2>
                 <div class="space-y-8 prose max-w-none prose-slate">
                      <p>Com o robô montado, é hora de lhe dar instruções. Para isso, será utilizado o mBlock, um software de programação gráfica baseado em blocos, ideal para iniciantes.</p>
                     <div class="step-block p-6 rounded-md">
@@ -374,8 +361,8 @@
                 </div>
             </section>
 
-            <section id="capitulo7" class="main-section hidden content-view p-8">
-                <h2 class="text-3xl mb-6">Capítulo 7: Missão Aceita! - Atividades Práticas Guiadas</h2>
+            <section id="capitulo8" class="main-section hidden content-view p-8">
+                <h2 class="text-3xl mb-6">Capítulo 8: Missão Aceita! - Atividades Práticas Guiadas</h2>
                 <div class="space-y-8 prose max-w-none prose-slate">
                     <p>Agora é a hora da verdade: dar vida ao robô com programação! As atividades a seguir foram projetadas para introduzir conceitos de programação de forma gradual e divertida.</p>
                     <div class="step-block p-6 rounded-md">
@@ -391,7 +378,7 @@
                     <div class="step-block p-6 rounded-md">
                         <h3 class="text-2xl">Etapa 3: Atividade 3: O Seguidor de Linha Inteligente</h3>
                         <p><strong>Objetivo:</strong> Utilizar os dados dos sensores de linha para que o robô tome decisões em tempo real. <strong>Lógica:</strong> A estratégia é manter o sensor central sobre a linha preta. Se o sensor central vê preto, o robô vai para frente. Se um sensor lateral vê preto, o robô faz uma curva de correção para o lado oposto. A correção é mais forte quanto mais distante da linha o sensor estiver.</p>
-                       <img src="https://i.ibb.co/9mVZPZJT/Whats-App-Image-2025-07-16-at-14-23-46.jpg" alt="Código em blocos da Atividade 3 no mBlock" class="content-image">
+                       <img src="https://i.ibb.co/bX13kC1/Atividade3.png" alt="Código em blocos da Atividade 3 no mBlock" class="content-image">
                     </div>
                 </div>
             </section>
