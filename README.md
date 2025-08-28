@@ -42,7 +42,7 @@ Todas as peças do chassi e os módulos intercambiáveis estão disponíveis em 
 
 A montagem do hardware é detalhada passo a passo em nossos guias:
 * **Guia Interativo (Recomendado):** [https://guia-robo.vercel.app](https://guia-robo.vercel.app) - Inclui vídeos e uma experiência mais dinâmica.
-* **Guia em PDF:** Disponível na pasta **`/Guia_PDF`**.
+* **Guia:** Disponível na pasta **`/Guia`** em PDF e video.
 
 ### 4. Configuração do Ambiente de Programação (mBlock)
 
